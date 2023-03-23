@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+
 import { Animal } from 'src/app/Animal';
+
+import { ListService } from 'src/app/services/list.service';
 
 @Component({
   selector: 'app-list-render',
@@ -8,10 +11,6 @@ import { Animal } from 'src/app/Animal';
 })
 export class ListRenderComponent {
   showAnimalDetails: string = '';
-
-  onHandleShowAge(animal: Animal) {
-    this.showAnimalDetails = `O animal ${animal.name} tem ${animal.age} anos`;
-  }
 
   animals: Animal[] = [
     {
@@ -35,4 +34,15 @@ export class ListRenderComponent {
       age: 2,
     },
   ];
+
+  constructor(private listService: ListService) {}
+
+  onHandleShowAge(animal: Animal) {
+    this.showAnimalDetails = `O animal ${animal.name} tem ${animal.age} anos`;
+  }
+
+  removeAnimal(animal: Animal) {
+    console.log('Removendo animal');
+    this.animals = this.listService.remove(this.animals, animal);
+  }
 }
