@@ -15,7 +15,7 @@ import { ChangeNumberComponent } from './components/change-number/change-number.
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBondingComponent } from './components/two-way-bonding/two-way-bonding.component';
-import { ListNamesComponent } from './compoenents/list-names/list-names.component';
+import { ListNamesComponent } from './components/list-names/list-names.component';
 
 @NgModule({
   declarations: [
