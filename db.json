@@ -20,5 +20,23 @@
             "type": "Horse",
             "age": 2
         }
+    ],
+    "names": [
+        {
+            "name": "Geraldo",
+            "age": 24
+        },
+        {
+            "name": "Thainá",
+            "age": 22
+        },
+        {
+            "name": "Millena",
+            "age": 25
+        },
+        {
+            "name": "Thiago",
+            "age": 14
+        }
     ]
 }
