@@ -16,6 +16,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBondingComponent } from './components/two-way-bonding/two-way-bonding.component';
 import { ListNamesComponent } from './components/list-names/list-names.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ListNamesComponent } from './components/list-names/list-names.component
     PipesComponent,
     TwoWayBondingComponent,
     ListNamesComponent,
+    ItemDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
