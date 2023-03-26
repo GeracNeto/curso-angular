@@ -5,13 +5,13 @@
     </a>
     <ul class="links">
         <li>
-            <a routerLink="/">Home</a>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
         </li>
         <li id="add">
-            <a routerLink="/moments/new">Compartilhar</a>
+            <a routerLink="/moments/new" routerLinkActive="active">Compartilhar</a>
         </li>
         <li>
-            <a routerLink="/about">Sobre</a>
+            <a routerLink="/about" routerLinkActive="active">Sobre</a>
         </li>
     </ul>
 </nav>

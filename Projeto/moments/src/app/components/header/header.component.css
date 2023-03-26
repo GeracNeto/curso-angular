@@ -5,7 +5,8 @@ nav {
     border-bottom: 1px solid #777;
 }
 
-.brand, .links {
+.brand,
+.links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,4 +41,9 @@ nav {
 #add a:hover {
     background: #efefef;
     border-radius: 10px;
+}
+
+.active{
+    text-decoration: underline;
+    font-size: 1.1em;
 }
