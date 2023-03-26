@@ -1,0 +1,13 @@
+<div class="main-page">
+    <form (ngSubmit)="submit()" [formGroup]="userForm" #formDir="ngForm">
+        <label for="username">Search Repos from Username </label>
+        <input type="text" placeholder="Username..." formControlName="name" required>
+        <div *ngIf="name.invalid && formDir.submitted">
+            <p *ngIf="name.errors?.['required']" class="invalid-input">username required</p>
+        </div>
+        <input type="submit" value="Search" >
+    </form>
+    <div class="repos-container" *ngIf="repos">
+        <app-repo *ngFor="let repo of repos" [repo]="repo"></app-repo>
+    </div>
+</div>
