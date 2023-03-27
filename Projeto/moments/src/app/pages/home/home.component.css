@@ -1,15 +1,15 @@
-.home-container{
+.home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.home-container h1{
+.home-container h1 {
     margin-bottom: 0.5em;
 }
 
-.moments-container{
+.moments-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 80%;
@@ -17,24 +17,47 @@
     justify-content: space-between;
 }
 
-.moment{
+.moment {
     width: 32%;
     margin-bottom: 1em;
     text-align: center;
 }
 
-.moment img{
+.moment img {
     width: 100%;
     margin-bottom: 1em;
     height: 50%;
     object-fit: cover;
 }
 
-.moment h3, .moment p{
+.moment h3,
+.moment p {
     margin-bottom: 1em;
 }
 
-.moment .date{
+.moment .date {
     font-size: 0.7em;
     font-style: italic;
+}
+
+.search-container {
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.search-container form {
+    width: 30%;
+    position: relative;
+}
+
+.search-container fa-icon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.search-container input{
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
 }

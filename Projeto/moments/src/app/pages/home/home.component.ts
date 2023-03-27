@@ -17,6 +17,9 @@ export class HomeComponent {
   moments: Moment[] = [];
   baseApiUrl = environment.baseApiUrl;
 
+  faSearch = faSearch;
+  searchTerm: string = '';
+
   // todo search
 
   constructor(private momentService: MomentService) {}
@@ -34,5 +37,14 @@ export class HomeComponent {
       this.allMoments = data;
       this.moments = data;
     });
+  }
+
+  search(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    const value = target.value;
+
+    this.moments = this.allMoments.filter((moment) =>
+      moment.title.toLowerCase().includes(value)
+    );
   }
 }
