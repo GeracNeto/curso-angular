@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { faEdit, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { Moment } from 'src/app/Moment';
+import { MessagesService } from 'src/app/services/messages.service';
 
 import { MomentService } from 'src/app/services/moment.service';
 import { environment } from 'src/environments/environment';
@@ -22,7 +23,9 @@ export class MomentComponent {
 
   constructor(
     private momentService: MomentService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private messageService: MessagesService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,5 +34,13 @@ export class MomentComponent {
     this.momentService
       .getMoment(id)
       .subscribe((item) => (this.moment = item.data));
+  }
+
+  async removeHandler(id: number) {
+    await this.momentService.removeMoment(id).subscribe();
+
+    this.messageService.add('Momento excluído com sucesso!');
+
+    this.router.navigate(['/']);
   }
 }
