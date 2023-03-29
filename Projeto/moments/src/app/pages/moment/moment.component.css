@@ -43,7 +43,7 @@ img {
 }
 
 .comment-container {
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid #efefef;
     padding: 1em 0;
 }
